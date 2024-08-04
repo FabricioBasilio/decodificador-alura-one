@@ -7,10 +7,33 @@
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 98vw;
 }
 
 main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    height: 98vh;
+}
+
+.entrada-de-texto {
+    background-color: blue;
+    width: 60%;
+}
+
+/* .entrada-de-texto > input {
+    width: ;
+} */
+
+.saida-de-texto {
+    width: 400px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    background-color: cyan;
+    text-align: center;
 }
