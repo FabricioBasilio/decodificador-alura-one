@@ -11,11 +11,15 @@
 <body>
     <main>
         <section class="entrada-de-texto">
-            <input type="text">
-            <p>Apenas letras minúsculas e sem acento.</p>
+
+            <section class="entrada-de-texto__texto">
+                <input type="text" placeholder="Digite seu texto">
+                <p class="entrada-de-texto__texto__aviso"><img src="imagens/bi_exclamation-circle-fill.png" alt="exclamacao"> Apenas letras minúsculas e sem acento.</p>
+            </section>
+
             <section class="entrada-de-texto__botoes">
-                <button>Criptografar</button>
-                <button>Descriptografar</button>
+                <button id="botao-criptografar">Criptografar</button>
+                <button id="botao-descriptografar">Descriptografar</button>
             </section>
         </section>
         <section class="saida-de-texto">
