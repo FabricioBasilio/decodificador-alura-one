@@ -30,21 +30,25 @@ main {
     justify-content: space-between;
 }
 
-.entrada-de-texto > .entrada-de-texto__texto > input {
+.entrada-de-texto > .entrada-de-texto__texto > textarea {
     width: 100%;
-    padding-bottom: 450px;
+    padding-bottom: 425px;
     outline: none;
     font-size: 25px;
+    resize: none;
     border: none;
 }
 
-.entrada-de-texto > .entrada-de-texto__texto > input::placeholder {
+.entrada-de-texto > .entrada-de-texto__texto > textarea::placeholder {
     color: var(--cor1);
 }
 
 .entrada-de-texto > .entrada-de-texto__texto > .entrada-de-texto__texto__aviso {
     color: grey;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .entrada-de-texto > .entrada-de-texto__texto > .entrada-de-texto__texto__aviso img {
