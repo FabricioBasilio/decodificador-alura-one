@@ -68,6 +68,8 @@ main {
     border-radius: 15px;
     border: none;
     cursor: pointer;
+    transition-duration: .1s;
+    transition-timing-function: linear;
 }
 
 #botao-criptografar {
@@ -82,14 +84,51 @@ main {
     border: var(--cor1) solid 1px;
 }
 
+#botao-criptografar:hover {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    border: var(--cor1) solid 1px;
+}
+
+#botao-descriptografar:hover {
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: var(--cor2) solid 1px;
+}
+
 
 .saida-de-texto {
     width: 400px;
-    background-color: aquamarine;
+    height: 585px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 3px black;
+    border-radius: 25px;
 }
+
+.saida-de-texto > .saida-de-texto__imagem {
+    width: 336px;
+    height: 304px;
+}
+
+.saida-de-texto > .saida-de-texto__mensagem {
+    text-align: center;
+    height: 100px;
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.saida-de-texto > .saida-de-texto__mensagem > .saida-de-texto__mensagem__titulo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+
 
 footer {
     background-color: cyan;
