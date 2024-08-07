@@ -73,26 +73,32 @@ function descriptografar() {
 
 function adicionarTexto(texto) {
     if (saidaTextoAjustada === false) {
-        let paragrafo, botaoCopiar, textoParagrafo, textoBotao;
+        let paragrafo, botaoCopiar, textoParagrafo, textoBotao, divDoTexto;
 
         imagem.style.display = "none";
         mensagem.style.display = "none";
 
         paragrafo = document.createElement("p");
         botaoCopiar = document.createElement("button");
+        divDoTexto = document.createElement("div");
 
         textoParagrafo = document.createTextNode(texto);
         textoBotao = document.createTextNode("Copiar");
 
         paragrafo.appendChild(textoParagrafo);
         paragrafo.id = "texto-saida";
+        paragrafo.classList.add("paragrafo-saida-de-texto");
+
+        divDoTexto.appendChild(paragrafo);
+        divDoTexto.classList.add("div-do-paragrafo");
+
         botaoCopiar.appendChild(textoBotao);
         botaoCopiar.classList.add("botao-copiar");
 
-        saidaTexto.appendChild(paragrafo);
+        saidaTexto.appendChild(divDoTexto);
         saidaTexto.appendChild(botaoCopiar);
 
-        saidaTexto.style.justifyContent = "space-between"
+        saidaTexto.classList.add("saida-de-texto-ajustada");
 
         saidaTextoAjustada = true;
     }

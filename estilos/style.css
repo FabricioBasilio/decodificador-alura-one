@@ -1,14 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
     --cor1: #0A3871;
     --cor2: #D8DFE8;
+    --fontePrincipal: "Inter", sans-serif; 
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontePrincipal);
+}
+
 
 body {
     height: 100vh;
@@ -63,12 +67,15 @@ main {
 }
 
 .entrada-de-texto > .entrada-de-texto__botoes button {
-    padding: 15px 75px;
+    padding: 20px 50px;
+    width: 250px;
     border-radius: 15px;
     border: none;
     cursor: pointer;
     transition-duration: .1s;
     transition-timing-function: linear;
+    text-align: center;
+    outline: none;
 }
 
 #botao-criptografar {
@@ -97,7 +104,7 @@ main {
 
 
 .saida-de-texto {
-    width: 400px;
+    width: 350px;
     height: 585px;
     display: flex;
     flex-direction: column;
@@ -105,6 +112,8 @@ main {
     align-items: center;
     box-shadow: 0 2px 3px black;
     border-radius: 25px;
+    gap: 10px;
+    padding: 20px;
 }
 
 .saida-de-texto > .saida-de-texto__imagem {
@@ -126,16 +135,34 @@ main {
     font-weight: 600;
 }
 
+.saida-de-texto-ajustada {
+    justify-content: space-between;
+    gap: 0;
+}
+
+.div-do-paragrafo {
+    height: 85%;
+    overflow-y: auto;
+}
+
+.paragrafo-saida-de-texto {
+    color: #495057;
+    font-size: 25px;
+}
+
 .botao-copiar {
-    padding: 15px 75px;
+    padding: 20px 50px;
+    width: 100%;
+    text-align: center;
     border-radius: 15px;
     border: none;
     cursor: pointer;
     transition-duration: .1s;
     transition-timing-function: linear;
-    background-color: var(--cor2);
+    background-color: white;
     color: var(--cor1);
     border: var(--cor1) solid 1px;
+    outline: none;
 }
 
 .botao-copiar:hover {
