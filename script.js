@@ -94,6 +94,7 @@ function adicionarTexto(texto) {
 
         botaoCopiar.appendChild(textoBotao);
         botaoCopiar.classList.add("botao-copiar");
+        botaoCopiar.addEventListener("click", copiarTexto);
 
         saidaTexto.appendChild(divDoTexto);
         saidaTexto.appendChild(botaoCopiar);
@@ -112,6 +113,10 @@ function adicionarTexto(texto) {
     }
 }
 
+function copiarTexto() {
+    const textoSaida = document.getElementById("texto-saida").innerText;
+    navigator.clipboard.writeText(textoSaida);
+}
 
 function checarMinusculo(texto) {
     if (texto === texto.toLowerCase())
