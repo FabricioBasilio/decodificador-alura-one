@@ -126,6 +126,24 @@ main {
     font-weight: 600;
 }
 
+.botao-copiar {
+    padding: 15px 75px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition-duration: .1s;
+    transition-timing-function: linear;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    border: var(--cor1) solid 1px;
+}
+
+.botao-copiar:hover {
+    background-color: var(--cor1);
+    color: var(--cor2);
+    border: var(--cor2) solid 1px;
+}
+
 footer {
     width: 100%;
     background-color: cyan;
