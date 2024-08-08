@@ -127,7 +127,7 @@ function copiarTexto() {
 function checarCaracteres(texto, textoLength) {
     for (let i = 0; i < textoLength; i++) {
         let caractere = texto.charCodeAt(i);
-        if (!(caractere >= 97 && caractere <= 122)) {
+        if (!((caractere >= 97 && caractere <= 122) || (caractere === 32))) {
             return false;
         }
     }
