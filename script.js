@@ -12,16 +12,19 @@ botaoDescriptografar.addEventListener("click", descriptografar);
 
 function criptografar() {
     let texto = inputDoTexto.value;
-    let estaMinusculo = checarMinusculo(texto);
     let textoLength = texto.length;
-    let textoCriptografado;
 
     if (textoLength === 0) {
         alert("Não há nenhum texto.");
         return;
     }
-    else if (!estaMinusculo) {
-        alert("É necessário o texto estar com letras minúsculas!");
+
+    let estaMinusculo = checarCaracteres(texto, textoLength);
+    let textoCriptografado;
+
+
+    if (!estaMinusculo) {
+        alert("É necessário o texto estar com letras minúsculas e não apresentar caracteres especiais!");
         return;
     }
 
@@ -49,16 +52,19 @@ function criptografar() {
 
 function descriptografar() {
     let texto = inputDoTexto.value;
-    let estaMinusculo = checarMinusculo(texto);
     let textoLength = texto.length;
-    let textoDescriptografado;
 
     if (textoLength === 0) {
         alert("Não há nenhum texto.");
         return;
     }
-    else if (!estaMinusculo) {
-        alert("É necessário o texto estar com letras minúsculas!");
+
+    let estaMinusculo = checarCaracteres(texto, textoLength);
+    let textoDescriptografado;
+
+
+    if (!estaMinusculo) {
+        alert("É necessário o texto estar com letras minúsculas e não apresentar caracteres especiais!");
         return;
     }
 
@@ -118,8 +124,12 @@ function copiarTexto() {
     navigator.clipboard.writeText(textoSaida);
 }
 
-function checarMinusculo(texto) {
-    if (texto === texto.toLowerCase())
-        return true;
-    else return false;
+function checarCaracteres(texto, textoLength) {
+    for (let i = 0; i < textoLength; i++) {
+        let caractere = texto.charCodeAt(i);
+        if (!(caractere >= 97 && caractere <= 122)) {
+            return false;
+        }
+    }
+    return true;
 }

@@ -3,7 +3,7 @@
 :root {
     --cor1: #0A3871;
     --cor2: #D8DFE8;
-    --fontePrincipal: "Inter", sans-serif; 
+    --fontePrincipal: "Inter", sans-serif;
 }
 
 * {
@@ -33,7 +33,7 @@ main {
     justify-content: space-between;
 }
 
-.entrada-de-texto > .entrada-de-texto__texto > textarea {
+.entrada-de-texto>.entrada-de-texto__texto>textarea {
     width: 100%;
     padding-bottom: 425px;
     outline: none;
@@ -42,11 +42,11 @@ main {
     border: none;
 }
 
-.entrada-de-texto > .entrada-de-texto__texto > textarea::placeholder {
+.entrada-de-texto>.entrada-de-texto__texto>textarea::placeholder {
     color: var(--cor1);
 }
 
-.entrada-de-texto > .entrada-de-texto__texto > .entrada-de-texto__texto__aviso {
+.entrada-de-texto>.entrada-de-texto__texto>.entrada-de-texto__texto__aviso {
     color: grey;
     font-size: 14px;
     display: flex;
@@ -54,19 +54,19 @@ main {
     gap: 5px;
 }
 
-.entrada-de-texto > .entrada-de-texto__texto > .entrada-de-texto__texto__aviso img {
+.entrada-de-texto>.entrada-de-texto__texto>.entrada-de-texto__texto__aviso img {
     width: 14px;
     height: 14px;
 }
 
-.entrada-de-texto > .entrada-de-texto__botoes {
+.entrada-de-texto>.entrada-de-texto__botoes {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 65px; 
+    height: 65px;
 }
 
-.entrada-de-texto > .entrada-de-texto__botoes button {
+.entrada-de-texto>.entrada-de-texto__botoes button {
     padding: 20px 50px;
     width: 250px;
     border-radius: 15px;
@@ -116,12 +116,12 @@ main {
     padding: 20px;
 }
 
-.saida-de-texto > .saida-de-texto__imagem {
+.saida-de-texto>.saida-de-texto__imagem {
     width: 336px;
     height: 304px;
 }
 
-.saida-de-texto > .saida-de-texto__mensagem {
+.saida-de-texto>.saida-de-texto__mensagem {
     text-align: center;
     height: 100px;
     width: 336px;
@@ -130,7 +130,7 @@ main {
     justify-content: space-between;
 }
 
-.saida-de-texto > .saida-de-texto__mensagem > .saida-de-texto__mensagem__titulo {
+.saida-de-texto>.saida-de-texto__mensagem>.saida-de-texto__mensagem__titulo {
     font-size: 24px;
     font-weight: 600;
 }
@@ -143,6 +143,8 @@ main {
 .div-do-paragrafo {
     height: 85%;
     overflow-y: auto;
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .paragrafo-saida-de-texto {
